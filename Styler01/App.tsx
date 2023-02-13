@@ -1,12 +1,22 @@
 import React from 'react';
-import {SafeAreaView, Text, useColorScheme, View} from 'react-native';
+import {
+  SafeAreaView,
+  ScrollView,
+  Text,
+  useColorScheme,
+  View,
+} from 'react-native';
+import Elevated from './components/Elevated';
+import FlatCards from './components/FlatCards';
 
 function App(): JSX.Element {
+  const isDarkMode = useColorScheme() === 'dark';
   return (
     <SafeAreaView>
-      <View>
-        <Text>Heloooo</Text>
-      </View>
+      <ScrollView>
+        <FlatCards />
+        <Elevated />
+      </ScrollView>
     </SafeAreaView>
   );
 }
