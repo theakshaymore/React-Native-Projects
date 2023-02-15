@@ -6,7 +6,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import Elevated from './components/Elevated';
+import ElevatedCards from './components/ElevatedCards';
+import FancyCard from './components/FancyCard';
 import FlatCards from './components/FlatCards';
 
 function App(): JSX.Element {
@@ -15,7 +16,8 @@ function App(): JSX.Element {
     <SafeAreaView>
       <ScrollView>
         <FlatCards />
-        <Elevated />
+        <ElevatedCards />
+        <FancyCard />
       </ScrollView>
     </SafeAreaView>
   );
