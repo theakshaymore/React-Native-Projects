@@ -6,6 +6,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import ActionCard from './components/ActionCard';
+import ContactList from './components/ContactList';
 import ElevatedCards from './components/ElevatedCards';
 import FancyCard from './components/FancyCard';
 import FlatCards from './components/FlatCards';
@@ -18,6 +20,8 @@ function App(): JSX.Element {
         <FlatCards />
         <ElevatedCards />
         <FancyCard />
+        <ContactList />
+        <ActionCard />
       </ScrollView>
     </SafeAreaView>
   );

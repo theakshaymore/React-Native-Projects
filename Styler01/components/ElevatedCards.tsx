@@ -82,12 +82,7 @@ const styles = StyleSheet.create({
   cardOne: {
     // backgroundColor: '#CAD5E2',
   },
-  cardTwo: {
-    backgroundColor: '#50DBB4',
-  },
-  cardThree: {
-    backgroundColor: '#5DA3FA',
-  },
+
   cardImage: {
     height: 100,
     width: 100,

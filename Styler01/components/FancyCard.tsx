@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
       height: 1,
     },
   },
+
   cardImage: {
     height: 180,
     marginBottom: 8,
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
   cardTitle: {
-    color: '#000000',
+    color: '#6CACE4',
     fontSize: 22,
     fontWeight: 'bold',
     marginBottom: 4,
@@ -98,7 +99,7 @@ const styles = StyleSheet.create({
     flexShrink: 1,
   },
   cardFooter: {
-    color: '#FF6263',
+    color: '#6CACE4',
     marginBottom: 4,
   },
 });
