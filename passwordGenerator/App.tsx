@@ -14,12 +14,37 @@ const passwordScheme = Yup.object().shape({
 export default function App() {
   const [password, setPassword] = useState("");
   const [isPassGenerated, setIsPassGenerated] = useState(false);
-  const [lowerase, useLowerCase] = useState(true);
-  const [upperCase, useUpperCase] = useState(false);
-  const [symbol, useSymbol] = useState(false);
 
-  const generatedPassString = (passwordLength: number) => {
-    //
+  const [lowerCase, setLowerCase] = useState(true);
+  const [upperCase, setupperCase] = useState(false);
+  const [numbers, setNumbers] = useState(false);
+  const [symbols, setSymbols] = useState(false);
+
+  const generatePasswordString = (passwordLength: number) => {
+    let characterList = "";
+
+    const upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
+    const digitChars = "0123456789";
+    const specialChars = "!@#$%^&*()_+";
+
+    if (upperCase) {
+      characterList += upperCaseChars;
+    }
+    if (lowerCase) {
+      characterList += lowerCaseChars;
+    }
+    if (numbers) {
+      characterList += digitChars;
+    }
+    if (symbols) {
+      characterList += specialChars;
+    }
+
+    const passwordResult = createPassword(characterList, passwordLength);
+
+    setPassword(passwordResult);
+    setIsPassGenerated(true);
   };
 
   const createPassword = (characters: string, passwordLength: number) => {
@@ -29,6 +54,15 @@ export default function App() {
       result += characters.charAt(characterIndex);
     }
     return result;
+  };
+
+  const resetPasswordState = () => {
+    setPassword("");
+    setIsPassGenerated(false);
+    setLowerCase(true);
+    setupperCase(false);
+    setNumbers(false);
+    setSymbols(false);
   };
 
   return (
